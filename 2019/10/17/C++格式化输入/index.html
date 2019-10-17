@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>第一次测试尝试！ | Hexo</title>
+  <title>C++分割输入字符串 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Welcome to QHQ's Blog" />
   
-  <meta name="description" content="QHQ-This is a nice day">
-<meta name="keywords" content="First,Second">
+  <meta name="description" content="QHQ-It was day full of memories">
+<meta name="keywords" content="C++,格式化输入,分割字符串">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一次测试尝试！">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;16&#x2F;First&#x2F;index.html">
+<meta property="og:title" content="C++分割输入字符串">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;17&#x2F;C++%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="QHQ-This is a nice day">
+<meta property="og:description" content="QHQ-It was day full of memories">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-16T14:16:59.429Z">
+<meta property="og:updated_time" content="2019-10-17T15:34:22.009Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -108,14 +108,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-First" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-C++格式化输入" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      第一次测试尝试！
+      C++分割输入字符串
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -128,7 +128,7 @@
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2019-10-16
+          <i class="fa fa-calendar"></i>  2019-10-17
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -144,54 +144,22 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p> QHQ-This is a nice day</p>
+            <p> QHQ-It was day full of memories</p>
 <a id="more"></a>
-<h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
+<h1 id="C-字符串分割"><a href="#C-字符串分割" class="headerlink" title="C++字符串分割"></a>C++字符串分割</h1><h2 id="C-没有split分割的函数！！！！"><a href="#C-没有split分割的函数！！！！" class="headerlink" title="C++没有split分割的函数！！！！"></a>C++没有split分割的函数！！！！</h2><blockquote>
+<p>C++没有c语言的那样方便的格式化输入，像c语言你如果想一次性输入1#2，而分别把1和2赋值给x和y，你可以这样：<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scanf(&quot;%d#%d&quot;,&amp;x,&amp;y);</span><br></pre></td></tr></table></figure><br>当然你也可以自己定义一个方法来实现这个想法。</p>
 </blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">   #include &lt;iostream&gt;</span><br><span class="line">   #include &lt;string&gt;</span><br><span class="line">   #include &lt;cstddef&gt;</span><br><span class="line">   #include &lt;vector&gt;</span><br><span class="line">   using namespace std;</span><br><span class="line">   namespace strg</span><br><span class="line">   &#123;</span><br><span class="line">   //函数模板</span><br><span class="line">template&lt;typename Container&gt;</span><br><span class="line">inline std::size_t strtok(std::string&amp; str, Container&amp; cont, const std::string defstr = &quot; &quot;)</span><br><span class="line">&#123;</span><br><span class="line">	cont.clear();</span><br><span class="line">	std::size_t size = 0;</span><br><span class="line">	std::size_t begpos = 0 ;</span><br><span class="line">	std::size_t endpos = 0 ;</span><br><span class="line">	begpos = str.find_first_not_of(defstr);</span><br><span class="line">	while (begpos != std::string::npos)</span><br><span class="line">	&#123;</span><br><span class="line">		size++;</span><br><span class="line">		endpos = str.find_first_of(defstr, begpos);</span><br><span class="line">		if (endpos == std::string::npos)</span><br><span class="line">		&#123;</span><br><span class="line">			endpos = str.size();</span><br><span class="line">		&#125;</span><br><span class="line">		std::string ssubstr = str.substr(begpos, endpos -begpos);</span><br><span class="line">		cont.push_back(ssubstr);    //将分割的字符串存入容器当中</span><br><span class="line">		begpos = str.find_first_not_of(defstr, endpos+1);</span><br><span class="line">	&#125;</span><br><span class="line">	return size;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">template&lt;typename Container&gt;</span><br><span class="line">inline size_t stringtok(std::string&amp; str, Container&amp; cont, const std::string defstr = &quot; &quot;)</span><br><span class="line">&#123;</span><br><span class="line">	cont.clear();</span><br><span class="line">	std::size_t size = 0;</span><br><span class="line">	std::size_t length = str.length();</span><br><span class="line"></span><br><span class="line">	std::size_t begpos = 0;</span><br><span class="line">	std::size_t endpos = 0;</span><br><span class="line">	while (begpos &lt; length)</span><br><span class="line">	&#123;</span><br><span class="line">		size++;</span><br><span class="line">		begpos = str.find_first_not_of(defstr,begpos);</span><br><span class="line">		if (begpos == std::string::npos)</span><br><span class="line">			return -1;</span><br><span class="line">		endpos = str.find_first_of(defstr, begpos);</span><br><span class="line">		if (endpos == std::string::npos)</span><br><span class="line">		&#123;</span><br><span class="line">			endpos = length;</span><br><span class="line">		&#125;</span><br><span class="line">		std::string ssubstr = str.substr(begpos, endpos - begpos);</span><br><span class="line">		cont.push_back(ssubstr);</span><br><span class="line"></span><br><span class="line">		begpos = endpos + 1;</span><br><span class="line">	&#125;</span><br><span class="line">	return size;</span><br><span class="line">&#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   int main()</span><br><span class="line">   &#123;</span><br><span class="line">std::string str =  &quot;- This, a sample string.&quot;;</span><br><span class="line">vector&lt;string&gt; vec;</span><br><span class="line">int size = strg::strtok(str,vec,&quot;-,. &quot;);</span><br><span class="line">for (auto&amp; it : vec)</span><br><span class="line">	cout &lt;&lt; it &lt;&lt; &quot; &quot;;</span><br><span class="line">cout&lt;&lt; endl;</span><br><span class="line">system(&quot;pause&quot;);</span><br><span class="line">return 0;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></code></pre><blockquote>
+<p>而我今天主要想说的是另一个巧妙的方法：用一个小变量temp来中转:</p>
 </blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">string str;</span><br><span class="line">int x = 0;</span><br><span class="line">int y = 0;</span><br><span class="line">cin&gt;&gt;str;</span><br><span class="line">int s = str.length();</span><br><span class="line">int temp = 0;</span><br><span class="line">for(int i = 0; i&lt;s; i++)</span><br><span class="line">&#123;</span><br><span class="line">    if(str[i] != &apos;#&apos;)</span><br><span class="line">    &#123;</span><br><span class="line">        temp = temp * 10 + (int)str[i] -48;</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        x = temp;</span><br><span class="line">        temp = 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">y  = temp;</span><br></pre></td></tr></table></figure></code></pre><blockquote>
+<p>这样如果你想输入1#2，它就会通过temp中转后分别赋值给x和y，这个例子仅是转换为想要的数值int型。</p>
 </blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="关于巴尔"><a href="#关于巴尔" class="headerlink" title="关于巴尔"></a>关于巴尔</h2><p><strong>巴尔郝图</strong> 是小柒（戚浩强）的个人站。</p>
-<blockquote>
-<p>一盏灯， 一片昏黄； 一简书， 一杯淡茶。 守着那一份淡定， 品读属于自己的寂寞。 保持淡定， 才能欣赏到最美丽的风景！ 保持淡定， 人生从此不再寂寞。</p>
-</blockquote>
-<p><em>一盏灯</em>， 一片昏黄；<strong>一简书</strong>， 一杯淡茶。 守着那一份淡定， 品读属于自己的寂寞。 保持淡定， 才能欣赏到最美丽的风景！ 保持淡定， 人生从此不再寂寞。</p>
-<table>
-<thead>
-<tr>
-<th>Tables</th>
-<th align="center">Are</th>
-<th align="right">Cool</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>col 3 is</td>
-<td align="center">right-aligned</td>
-<td align="right">$1600</td>
-</tr>
-<tr>
-<td>col 2 is</td>
-<td align="center">centered</td>
-<td align="right">$12</td>
-</tr>
-<tr>
-<td>zebra stripes</td>
-<td align="center">are neat</td>
-<td align="right">$1</td>
-</tr>
-</tbody></table>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年10月16日 22:16</p>
-        <p>原始链接： <a class="post-url" href="/2019/10/16/First/" title="第一次测试尝试！">http://yoursite.com/2019/10/16/First/</a></p>
+        <p>最后更新： 2019年10月17日 23:34</p>
+        <p>原始链接： <a class="post-url" href="/2019/10/17/C++%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/" title="C++分割输入字符串">http://yoursite.com/2019/10/17/C++%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/</a></p>
         <footer>
             <a href="http://yoursite.com">
                 <img src="/images/logo.png" alt="John Doe">
@@ -248,7 +216,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/10/16/First/&title=《第一次测试尝试！》 — Hexo&pic=/images/banner.jpg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/10/17/C++%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/&title=《C++分割输入字符串》 — Hexo&pic=/images/banner.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -258,22 +226,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/10/16/First/&title=《第一次测试尝试！》 — Hexo&source= QHQ-This is a nice day" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/10/17/C++%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/&title=《C++分割输入字符串》 — Hexo&source= QHQ-It was day full of memories" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/10/16/First/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/10/17/C++%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《第一次测试尝试！》 — Hexo&url=http://yoursite.com/2019/10/16/First/&via=http://yoursite.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《C++分割输入字符串》 — Hexo&url=http://yoursite.com/2019/10/17/C++%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/&via=http://yoursite.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/10/16/First/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/10/17/C++%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -283,7 +251,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2019/10/16/First/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2019/10/17/C++%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -295,9 +263,11 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/First/" class="color1">First</a>
+    <a href="/tags/C++/" class="color4">C++</a>
       
-    <a href="/tags/Second/" class="color2">Second</a>
+    <a href="/tags/格式化输入/" class="color1">格式化输入</a>
+      
+    <a href="/tags/分割字符串/" class="color1">分割字符串</a>
       
   </li>
 
@@ -310,26 +280,16 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Why-Blog"><span class="post-toc-text">Why Blog</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#对博客的理解"><span class="post-toc-text">对博客的理解</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关于巴尔"><span class="post-toc-text">关于巴尔</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#C-字符串分割"><span class="post-toc-text">C++字符串分割</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#C-没有split分割的函数！！！！"><span class="post-toc-text">C++没有split分割的函数！！！！</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2019/10/17/C++%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          C++分割输入字符串
-        
-      </span>
-    </a>
   
-  
-    <a href="/2019/10/16/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">Hello World</span>
+    <a href="/2019/10/16/First/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">第一次测试尝试！</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
