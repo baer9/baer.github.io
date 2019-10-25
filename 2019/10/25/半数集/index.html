@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | Hexo</title>
+  <title>C++半数集问题 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Welcome to QHQ's Blog" />
   
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="QHQ-【问题描述】给定一个自然数n，由n开始可以依次产生半数集set(n)中的数如下： （1）n∈set(n); （2）在n的左边加上一个自然数，但该自然数不能超过最近添加的数的一半； （3）按此规则进行处理，直到不能再添加自然数为止。">
+<meta name="keywords" content="C++,计算机算法与设计,半数集问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https:&#x2F;&#x2F;qihaoqiang.github.io&#x2F;2019&#x2F;10&#x2F;16&#x2F;hello-world&#x2F;index.html">
+<meta property="og:title" content="C++半数集问题">
+<meta property="og:url" content="https:&#x2F;&#x2F;qihaoqiang.github.io&#x2F;2019&#x2F;10&#x2F;25&#x2F;%E5%8D%8A%E6%95%B0%E9%9B%86&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="QHQ-【问题描述】给定一个自然数n，由n开始可以依次产生半数集set(n)中的数如下： （1）n∈set(n); （2）在n的左边加上一个自然数，但该自然数不能超过最近添加的数的一半； （3）按此规则进行处理，直到不能再添加自然数为止。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-16T09:56:10.900Z">
+<meta property="og:updated_time" content="2019-10-25T04:40:38.721Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -107,20 +108,27 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-半数集" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      Hello World
+      C++半数集问题
     </h1>
     <div class="post-title-bar">
       <ul>
           
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/C++/">C++</a>
+                  
+              </li>
+          
         <li>
-          <i class="fa fa-calendar"></i>  2019-10-16
+          <i class="fa fa-calendar"></i>  2019-10-25
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -136,24 +144,21 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+            <p> QHQ-【问题描述】给定一个自然数n，由n开始可以依次产生半数集set(n)中的数如下：</p>
+<p>（1）n∈set(n);</p>
+<p>（2）在n的左边加上一个自然数，但该自然数不能超过最近添加的数的一半；</p>
+<p>（3）按此规则进行处理，直到不能再添加自然数为止。</p>
+<a id="more"></a>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">【问题描述】给定一个自然数n，由n开始可以依次产生半数集set(n)中的数如下：</span><br><span class="line"></span><br><span class="line">（1）n∈set(n);</span><br><span class="line"></span><br><span class="line">（2）在n的左边加上一个自然数，但该自然数不能超过最近添加的数的一半；</span><br><span class="line"></span><br><span class="line">（3）按此规则进行处理，直到不能再添加自然数为止。</span><br><span class="line"></span><br><span class="line">例如，set(6)=&#123;6,16,26,126,36,136&#125;。半数集set（6）中有6个元素。注意，该半数集是多重集。</span><br><span class="line"></span><br><span class="line">【算法设计】对于给定的自然数n，计算半数集set(n)中的元素个数。</span><br><span class="line"></span><br><span class="line">【输入形式】只有1行，给出整数n（0&lt;n&lt;1000）。</span><br><span class="line">【输出形式】只有1行，给出半数集set(n)中的元素个数。</span><br><span class="line">【样例输入】</span><br><span class="line"></span><br><span class="line">6</span><br><span class="line">【样例输出】</span><br><span class="line">6</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int my_set(int n)</span><br><span class="line">&#123;</span><br><span class="line">	int set_count = 1;</span><br><span class="line">	if (n == 1)</span><br><span class="line">		return 1;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		int i = 1;</span><br><span class="line">		while (i &lt;= (n / 2))</span><br><span class="line">		&#123;</span><br><span class="line">			set_count = set_count + my_set(i);</span><br><span class="line">			i++;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		return set_count;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int n = 0;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	cout &lt;&lt; my_set(n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年10月16日 17:56</p>
-        <p>原始链接： <a class="post-url" href="/2019/10/16/hello-world/" title="Hello World">https://qihaoqiang.github.io/2019/10/16/hello-world/</a></p>
+        <p>最后更新： 2019年10月25日 12:40</p>
+        <p>原始链接： <a class="post-url" href="/2019/10/25/%E5%8D%8A%E6%95%B0%E9%9B%86/" title="C++半数集问题">https://qihaoqiang.github.io/2019/10/25/%E5%8D%8A%E6%95%B0%E9%9B%86/</a></p>
         <footer>
             <a href="https://qihaoqiang.github.io">
                 <img src="/images/logo.png" alt="John Doe">
@@ -210,7 +215,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qihaoqiang.github.io/2019/10/16/hello-world/&title=《Hello World》 — Hexo&pic=https://qihaoqiang.github.ioimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qihaoqiang.github.io/2019/10/25/%E5%8D%8A%E6%95%B0%E9%9B%86/&title=《C++半数集问题》 — Hexo&pic=./images/th.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -220,22 +225,24 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qihaoqiang.github.io/2019/10/16/hello-world/&title=《Hello World》 — Hexo&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qihaoqiang.github.io/2019/10/25/%E5%8D%8A%E6%95%B0%E9%9B%86/&title=《C++半数集问题》 — Hexo&source= QHQ-【问题描述】给定一个自然数n，由n开始可以依次产生半数集set(n)中的数如下：
+（1）n∈set(n);
+（2）在n的左边加上一个自然数，但该..." data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qihaoqiang.github.io/2019/10/16/hello-world/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qihaoqiang.github.io/2019/10/25/%E5%8D%8A%E6%95%B0%E9%9B%86/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Hello World》 — Hexo&url=https://qihaoqiang.github.io/2019/10/16/hello-world/&via=https://qihaoqiang.github.io" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《C++半数集问题》 — Hexo&url=https://qihaoqiang.github.io/2019/10/25/%E5%8D%8A%E6%95%B0%E9%9B%86/&via=https://qihaoqiang.github.io" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qihaoqiang.github.io/2019/10/16/hello-world/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qihaoqiang.github.io/2019/10/25/%E5%8D%8A%E6%95%B0%E9%9B%86/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -245,7 +252,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://qihaoqiang.github.io/2019/10/16/hello-world/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://qihaoqiang.github.io/2019/10/25/%E5%8D%8A%E6%95%B0%E9%9B%86/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -254,6 +261,17 @@
         <ul class="article-footer-menu">
             
             
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/C++/" class="color4">C++</a>
+      
+    <a href="/tags/计算机算法与设计/" class="color4">计算机算法与设计</a>
+      
+    <a href="/tags/半数集问题/" class="color1">半数集问题</a>
+      
+  </li>
+
         </ul>
         
     </footer>
@@ -261,25 +279,14 @@
 </article>
 
 
-    <aside class="post-toc-pos post-toc-top" id="post-toc">
-        <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Quick-Start"><span class="post-toc-text">Quick Start</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Create-a-new-post"><span class="post-toc-text">Create a new post</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Run-server"><span class="post-toc-text">Run server</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generate-static-files"><span class="post-toc-text">Generate static files</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Deploy-to-remote-sites"><span class="post-toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
-        </nav>
-    </aside>
-    
 
 <nav id="article-nav">
   
-    <a href="/2019/10/16/First/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          第一次测试尝试！
-        
-      </span>
-    </a>
   
+    <a href="/2019/10/21/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">C++众数问题</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
   
 </nav>
 
