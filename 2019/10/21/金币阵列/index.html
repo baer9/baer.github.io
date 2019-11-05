@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>C++金币阵列 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Welcome to QHQ's Blog" />
+  
+  <meta name="description" content="QHQ-【问题描述】有m*n(m&amp;lt;=100, n&amp;lt;=100)枚金币在桌面上排成一个m行n列的金币矩阵。每枚金币或正面朝上或背面朝上。用数字表示金币状态，0表示金币正面朝上，1表示金币背面朝上。 金币矩阵游戏的规则是：1.每次可将任一行金币翻转过来放在原来的位置上；2.每次可任选2列，交换着2列金币位置。 算法设计：给定金币阵列的初始状态和目标状态，计算按金币游戏规则，将金币阵列从初始">
+<meta name="keywords" content="C++,计算机算法与设计,金币阵列">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++金币阵列">
+<meta property="og:url" content="https:&#x2F;&#x2F;qihaoqiang.github.io&#x2F;2019&#x2F;10&#x2F;21&#x2F;%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97&#x2F;index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="QHQ-【问题描述】有m*n(m&amp;lt;=100, n&amp;lt;=100)枚金币在桌面上排成一个m行n列的金币矩阵。每枚金币或正面朝上或背面朝上。用数字表示金币状态，0表示金币正面朝上，1表示金币背面朝上。 金币矩阵游戏的规则是：1.每次可将任一行金币翻转过来放在原来的位置上；2.每次可任选2列，交换着2列金币位置。 算法设计：给定金币阵列的初始状态和目标状态，计算按金币游戏规则，将金币阵列从初始">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-21T12:39:21.824Z">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">QHQ&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/index">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        QHQ&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个初学博客小菜鸟
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="QHQ" target="_blank" href="//index.html">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/qihaoqiang">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="https://m.weibo.cn/profile/6360347403">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="QQ" target="_blank" href="//">
+                            <i class="fa fa-qq fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-金币阵列" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      C++金币阵列
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/C++/">C++</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-10-21
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p> QHQ-【问题描述】有m*n(m&lt;=100, n&lt;=100)枚金币在桌面上排成一个m行n列的金币矩阵。每枚金币或正面朝上或背面朝上。用数字表示金币状态，0表示金币正面朝上，1表示金币背面朝上。</p>
+<p>金币矩阵游戏的规则是：1.每次可将任一行金币翻转过来放在原来的位置上；2.每次可任选2列，交换着2列金币位置。</p>
+<p>算法设计：给定金币阵列的初始状态和目标状态，计算按金币游戏规则，将金币阵列从初始状态转换到目标状态所需要的最小变换次数。</p>
+<a id="more"></a>
+
+<hr>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">问题描述】有m*n(m&lt;=100, n&lt;=100)枚金币在桌面上排成一个m行n列的金币矩阵。每枚金币或正面朝上或背面朝上。用数字表示金币状态，0表示金币正面朝上， 1表示金币背面朝上。</span><br><span class="line"></span><br><span class="line">金币矩阵游戏的规则是：1.每次可将任一行金币翻转过来放在原来的位置上；2.每次可任选2列，交换着2列金币位置。</span><br><span class="line"></span><br><span class="line">算法设计：给定金币阵列的初始状态和目标状态，计算按金币游戏规则，将金币阵列从初始状态转换到目标状态所需要的最小变换次数。</span><br><span class="line">【输入形式】第1行有2个正整数m和n，用#隔开。以下m行是金币阵列的初始状态，每行有n个数字表示该行金币的状态，0表示正面朝上，1表示背面朝上。接着的m行是金币阵列的目标状态，不用#隔开  。</span><br><span class="line">【输出形式】输出计算出的最小变化次数。相应数据无解是，输出-1 。</span><br><span class="line">【样例输入】</span><br><span class="line"></span><br><span class="line">4#3</span><br><span class="line"></span><br><span class="line">101</span><br><span class="line"></span><br><span class="line">000</span><br><span class="line"></span><br><span class="line">110</span><br><span class="line"></span><br><span class="line">101</span><br><span class="line">101</span><br><span class="line"></span><br><span class="line">111</span><br><span class="line"></span><br><span class="line">011</span><br><span class="line"></span><br><span class="line">101</span><br><span class="line">【样例输出】2</span><br></pre></td></tr></table></figure></code></pre><hr>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include &lt;fstream&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int size1 = 100;</span><br><span class="line">int k, n, m, ccount, best;</span><br><span class="line">int b0[size1 + 1][size1 + 1], b1[size1 + 1][size1 + 1], b[size1 + 1][size1 + 1];</span><br><span class="line">bool found;</span><br><span class="line"></span><br><span class="line">void stringToInt(string str,int&amp; n,int&amp; m)</span><br><span class="line">&#123;</span><br><span class="line">    int len = str.length();</span><br><span class="line">    int temp = 0;</span><br><span class="line">    for(int i = 0; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if(str[i] != &apos;#&apos;)</span><br><span class="line">        &#123;</span><br><span class="line">            temp = temp * 10 + (int)str[i] - 48;</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            n = temp;</span><br><span class="line">            temp = 0;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    m = temp;</span><br><span class="line">&#125;</span><br><span class="line">void trans1(int x)   // 行翻转</span><br><span class="line">&#123;</span><br><span class="line">	for (int i = 1; i &lt;= m; i++)</span><br><span class="line">		b1[x][i] = b1[x][i] ^ 1;</span><br><span class="line">	ccount++;</span><br><span class="line">&#125;</span><br><span class="line">void trans2(int x, int y)   // 列交换</span><br><span class="line">&#123;</span><br><span class="line">	for (int i = 1; i &lt;= n; i++)</span><br><span class="line">		swap(b1[i][x], b1[i][y]);</span><br><span class="line">	if (x != y) ccount++;</span><br><span class="line">&#125;</span><br><span class="line">bool same(int x, int y)</span><br><span class="line">&#123;</span><br><span class="line">	for (int i = 1; i &lt;= n; i++)</span><br><span class="line">		if (b0[i][x] != b1[i][y])</span><br><span class="line">			return false;</span><br><span class="line">	return true;</span><br><span class="line">&#125;</span><br><span class="line">void acpy(int a[size1 + 1][size1 + 1], int b[size1 + 1][size1 + 1])</span><br><span class="line">&#123;</span><br><span class="line">	for (int i = 1; i &lt;= n; i++)</span><br><span class="line">		for (int j = 1; j &lt;= m; j++)</span><br><span class="line">			a[i][j] = b[i][j];</span><br><span class="line">&#125;</span><br><span class="line">void answer()</span><br><span class="line">&#123;</span><br><span class="line">	int x, y, j, p;</span><br><span class="line">		//cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">		string str;</span><br><span class="line">		int temp = 0;</span><br><span class="line">		cin &gt;&gt; str;</span><br><span class="line">		stringToInt(str, n, m);</span><br><span class="line">		// 原状态   b0</span><br><span class="line">		for (x = 1; x &lt;= n; x++) &#123;</span><br><span class="line">			cin &gt;&gt; temp;</span><br><span class="line">			for (y = 1; y &lt;= m; y++) &#123;</span><br><span class="line">				b0[x][y] = temp % 10;</span><br><span class="line">				temp /= 10;</span><br><span class="line">				//cin &gt;&gt; b0[x][y];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		// 目标状态   b1</span><br><span class="line">		for (x = 1; x &lt;= n; x++) &#123;</span><br><span class="line">			cin &gt;&gt; temp;</span><br><span class="line">			for (int y = 1; y &lt;= m; y++) &#123;</span><br><span class="line">				b1[x][y] = temp % 10;</span><br><span class="line">				temp /= 10;</span><br><span class="line">				//cin &gt;&gt; b1[x][y];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		acpy(b, b1);</span><br><span class="line">		best = m + n + 1;</span><br><span class="line">		for (j = 1; j &lt;= m; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			acpy(b1, b);</span><br><span class="line">			ccount = 0;</span><br><span class="line">			trans2(1, j); // 列变换</span><br><span class="line">			int p;</span><br><span class="line">			for (p = 1; p &lt;= n; p++)</span><br><span class="line">				if (b0[p][1] != b1[p][1])</span><br><span class="line">					trans1(p); // 行变换</span><br><span class="line">			for (p = 1; p &lt;= m; p++)    //找列相等的（ b1 的 q 列和 b0 的 p 列相等）</span><br><span class="line">			&#123;</span><br><span class="line">				found = false;</span><br><span class="line">				for (int q = p; q &lt;= m; q++)</span><br><span class="line">					if (same(p, q))</span><br><span class="line">					&#123;</span><br><span class="line">						trans2(p, q);</span><br><span class="line">						found = true;</span><br><span class="line">						break;</span><br><span class="line">					&#125;</span><br><span class="line">				if (!found) break;</span><br><span class="line">			&#125;</span><br><span class="line">			if (found &amp;&amp; ccount &lt; best)</span><br><span class="line">				best = ccount;</span><br><span class="line">		&#125;</span><br><span class="line">		if (best &lt; m + n + 1) &#123;</span><br><span class="line">			cout &lt;&lt; best &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">		else &#123;</span><br><span class="line">			cout &lt;&lt; -1 &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">	//&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	answer();</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre><hr>
+<blockquote>
+<p><strong><em>StringToint()</em></strong> 函数获取输入的特殊格式，并分发数据给行n，列m。</p>
+</blockquote>
+<blockquote>
+<p><strong><em>trans1()</em></strong> 和 <strong><em>trans2()</em></strong> 为行转换与列转换。 </p>
+</blockquote>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年10月21日 20:39</p>
+        <p>原始链接： <a class="post-url" href="/2019/10/21/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/" title="C++金币阵列">https://qihaoqiang.github.io/2019/10/21/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/</a></p>
+        <footer>
+            <a href="https://qihaoqiang.github.io">
+                <img src="/images/logo.png" alt="John Doe">
+                John Doe
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qihaoqiang.github.io/2019/10/21/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/&title=《C++金币阵列》 — Hexo&pic=./images/th.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qihaoqiang.github.io/2019/10/21/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/&title=《C++金币阵列》 — Hexo&source= QHQ-【问题描述】有m*n(m&lt;=100, n&lt;=100)枚金币在桌面上排成一个m行n列的金币矩阵。每枚金币或正面朝上或背面朝上。用数字表..." data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qihaoqiang.github.io/2019/10/21/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《C++金币阵列》 — Hexo&url=https://qihaoqiang.github.io/2019/10/21/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/&via=https://qihaoqiang.github.io" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qihaoqiang.github.io/2019/10/21/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://qihaoqiang.github.io/2019/10/21/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/C++/" class="color4">C++</a>
+      
+    <a href="/tags/计算机算法与设计/" class="color4">计算机算法与设计</a>
+      
+    <a href="/tags/金币阵列/" class="color5">金币阵列</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2019/10/21/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          C++众数问题
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2019/10/21/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">C++最大间隙</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+        <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css">
+    <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script>
+    <div id="comments">
+        <script>
+            var gitment = new Gitment({
+                owner: 'qihaoqiang',
+                repo: '',
+                oauth: {
+                    client_id: '',
+                    client_secret: '',
+                },
+            })
+            gitment.render('comments')
+        </script>
+    </div>
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2019 John Doe<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://qihaoqiang.github.io",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/C/">C++</a><a class="category-link" href="/categories/First/">First</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/C-%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA/" style="font-size: 10px;">C++格式化输出</a> <a href="/tags/First/" style="font-size: 10px;">First</a> <a href="/tags/Second/" style="font-size: 10px;">Second</a> <a href="/tags/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/" style="font-size: 10px;">众数问题</a> <a href="/tags/%E5%8D%8A%E6%95%B0%E9%9B%86%E9%97%AE%E9%A2%98/" style="font-size: 10px;">半数集问题</a> <a href="/tags/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/" style="font-size: 10px;">最大间隙</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AE%97%E6%B3%95%E4%B8%8E%E8%AE%BE%E8%AE%A1/" style="font-size: 20px;">计算机算法与设计</a> <a href="/tags/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/" style="font-size: 10px;">金币阵列</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/index">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/C-%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA/" style="font-size: 10px;">C++格式化输出</a> <a href="/tags/First/" style="font-size: 10px;">First</a> <a href="/tags/Second/" style="font-size: 10px;">Second</a> <a href="/tags/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/" style="font-size: 10px;">众数问题</a> <a href="/tags/%E5%8D%8A%E6%95%B0%E9%9B%86%E9%97%AE%E9%A2%98/" style="font-size: 10px;">半数集问题</a> <a href="/tags/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/" style="font-size: 10px;">最大间隙</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AE%97%E6%B3%95%E4%B8%8E%E8%AE%BE%E8%AE%A1/" style="font-size: 20px;">计算机算法与设计</a> <a href="/tags/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/" style="font-size: 10px;">金币阵列</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>
+</body>
+</html>
