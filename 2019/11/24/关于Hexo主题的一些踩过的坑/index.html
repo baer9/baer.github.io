@@ -3,21 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>bat批修改文件后缀名 | Blog-Q</title>
+  <title>关于Hexo主题的一些踩过的坑 | Blog-Q</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Welcome to QHQ's Blog" />
   
-  <meta name="description" content="今天先说说bat最简单的操作1ren *.jpg *.txt  此语句可以把当前文件夹的所有jpg照片转换为txt格式，（有利于隐藏照片哦）。  接下来就简单来说一下怎么具体操作吧 新建txt文本 在里面填写上面语句 修改txt后缀名为bat   提示：.jpg 意思是任意文件名的jpg格式，当然也可以.* ，表示任意文件文件格式，第二个*.txt意思是任意任意文件名的最终格式。就是原文件名不变，">
-<meta name="keywords" content="bat,文件后缀名修改,显示文件后缀名">
+  <meta name="description" content="关于Hexo主题的一些踩过的坑一、主题选择问题 首先你需要在官网hexo选择你喜欢的主题。主要下载步骤有：Hxeo+Github pages。  二、绑定域名问题 每一次推送都会把你在setting设置的域名给覆盖，让你每一次都需要重新绑定一些域名，很麻烦。 所以我就上网搜索与尝试，找到解决方法，首先在你hexo根目录找到source*目录，先新建.txt文件，在里面写入你要绑定的域名。再重命名为">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bat批修改文件后缀名">
-<meta property="og:url" content="https:&#x2F;&#x2F;qihaoqiang.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C&#x2F;index.html">
+<meta property="og:title" content="关于Hexo主题的一些踩过的坑">
+<meta property="og:url" content="https:&#x2F;&#x2F;qihaoqiang.github.io&#x2F;2019&#x2F;11&#x2F;24&#x2F;%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91&#x2F;index.html">
 <meta property="og:site_name" content="Blog-Q">
-<meta property="og:description" content="今天先说说bat最简单的操作1ren *.jpg *.txt  此语句可以把当前文件夹的所有jpg照片转换为txt格式，（有利于隐藏照片哦）。  接下来就简单来说一下怎么具体操作吧 新建txt文本 在里面填写上面语句 修改txt后缀名为bat   提示：.jpg 意思是任意文件名的jpg格式，当然也可以.* ，表示任意文件文件格式，第二个*.txt意思是任意任意文件名的最终格式。就是原文件名不变，">
+<meta property="og:description" content="关于Hexo主题的一些踩过的坑一、主题选择问题 首先你需要在官网hexo选择你喜欢的主题。主要下载步骤有：Hxeo+Github pages。  二、绑定域名问题 每一次推送都会把你在setting设置的域名给覆盖，让你每一次都需要重新绑定一些域名，很麻烦。 所以我就上网搜索与尝试，找到解决方法，首先在你hexo根目录找到source*目录，先新建.txt文件，在里面写入你要绑定的域名。再重命名为">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-11T03:39:47.815Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;qihaoqiang.github.io&#x2F;2019&#x2F;11&#x2F;24&#x2F;%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91&#x2F;E:%5CQHQ_github_hexo%5Cthemes%5Cmiho%5Csource%5Cimages%5C11.24.1.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;qihaoqiang.github.io&#x2F;2019&#x2F;11&#x2F;24&#x2F;%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91&#x2F;E:%5CQHQ_github_hexo%5Cthemes%5Cmiho%5Csource%5Cimages%5C11.24.2.png">
+<meta property="og:updated_time" content="2019-11-24T05:52:17.567Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;qihaoqiang.github.io&#x2F;2019&#x2F;11&#x2F;24&#x2F;%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91&#x2F;E:%5CQHQ_github_hexo%5Cthemes%5Cmiho%5Csource%5Cimages%5C11.24.1.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -108,27 +110,20 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-bat简单批文件操作" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-关于Hexo主题的一些踩过的坑" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      bat批修改文件后缀名
+      关于Hexo主题的一些踩过的坑
     </h1>
     <div class="post-title-bar">
       <ul>
           
-              <li>
-                  <i class="fa fa-book"></i>
-                  
-                      <a href="/categories/bat/">bat</a>
-                  
-              </li>
-          
         <li>
-          <i class="fa fa-calendar"></i>  2019-11-11
+          <i class="fa fa-calendar"></i>  2019-11-24
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -144,26 +139,32 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h3 id="今天先说说bat最简单的操作"><a href="#今天先说说bat最简单的操作" class="headerlink" title="今天先说说bat最简单的操作"></a>今天先说说bat最简单的操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ren *.jpg *.txt</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>此语句可以把当前文件夹的所有jpg照片转换为txt格式，（有利于隐藏照片哦）。</p>
+            <h2 id="关于Hexo主题的一些踩过的坑"><a href="#关于Hexo主题的一些踩过的坑" class="headerlink" title="关于Hexo主题的一些踩过的坑"></a>关于Hexo主题的一些踩过的坑</h2><h5 id="一、主题选择问题"><a href="#一、主题选择问题" class="headerlink" title="一、主题选择问题"></a>一、主题选择问题</h5><blockquote>
+<p>首先你需要在官网<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo</a>选择你喜欢的主题。主要下载步骤有：<a href="https://www.jianshu.com/p/2afac1bc0af8" target="_blank" rel="noopener">Hxeo+Github pages</a>。</p>
 </blockquote>
-<h5 id="接下来就简单来说一下怎么具体操作吧"><a href="#接下来就简单来说一下怎么具体操作吧" class="headerlink" title="接下来就简单来说一下怎么具体操作吧"></a>接下来就简单来说一下怎么具体操作吧</h5><ol>
-<li>新建txt文本</li>
-<li>在里面填写上面语句</li>
-<li>修改txt后缀名为bat</li>
-</ol>
-<blockquote>
-<p>提示：<em>.jpg 意思是任意文件名的jpg格式，当然也可以</em>.* ，表示任意文件文件格式，第二个*.txt意思是任意任意文件名的最终格式。就是原文件名不变，只修改后缀名。（后缀名可以根据自己的要求自己更改）。</p>
+<h5 id="二、绑定域名问题"><a href="#二、绑定域名问题" class="headerlink" title="二、绑定域名问题"></a>二、绑定域名问题</h5><blockquote>
+<p>每一次推送都会把你在setting设置的域名给覆盖，让你每一次都需要重新绑定一些域名，很麻烦。</p>
+<p>所以我就上网搜索与尝试，找到解决方法，首先在你<em>hexo<em>根目录找到</em>source*目录，先新建</em>.txt<em>文件，在里面写入你要绑定的域名。再重命名为</em>CNAME*，删除后缀名。使其没有后缀名，类型为文件。<img src="/2019/11/24/%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/E:%5CQHQ_github_hexo%5Cthemes%5Cmiho%5Csource%5Cimages%5C11.24.1.png" alt="11.24.1"></p>
+<p>然后在<em>github</em>的<em>setting</em>里设置一次（保险设置一次，不设置也行）。</p>
 </blockquote>
-<hr>
-<blockquote>
-<h4 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h4></blockquote>
+<h5 id="三、主题内容更改"><a href="#三、主题内容更改" class="headerlink" title="三、主题内容更改"></a>三、主题内容更改</h5><blockquote>
+<p>在这只说一些我自己碰到的，基本上一般的坑网上都有详细教程。</p>
+<h6 id="3-1、标题，作者和文字的更换"><a href="#3-1、标题，作者和文字的更换" class="headerlink" title="3.1、标题，作者和文字的更换"></a>3.1、标题，作者和文字的更换</h6><p>​         基本上在<em>hexo*的根目录下的</em>_config.yml*文件就可以更改了。<img src="/2019/11/24/%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/E:%5CQHQ_github_hexo%5Cthemes%5Cmiho%5Csource%5Cimages%5C11.24.2.png" alt="11.24.2"></p>
+<p>注意：冒号后面需要空一格，不然会报错。默认语言为<em>en</em>，中文为<em>zh—CN（有需要可以更改，一般不变）</em>。</p>
+<h6 id="3-2、js特效的更换添加"><a href="#3-2、js特效的更换添加" class="headerlink" title="3.2、js特效的更换添加"></a>3.2、js特效的更换添加</h6><p>​          比如我的添加<strong>点击显示文字</strong>的特效：</p>
+<p>​          以我选择<em>miho</em>主题为例，先添加<strong>点击显示文字</strong>的<em>js</em>（目录为..\themes\miho\source\js\click_show_text.js<strong>）click_show_text.js</strong>：        </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">var a_idx = 0;</span><br><span class="line">jQuery(document).ready(function($) &#123;</span><br><span class="line">    $(&quot;body&quot;).click(function(e) &#123;</span><br><span class="line">        var a = new Array</span><br><span class="line">        (&quot;富强&quot;, &quot;民主&quot;, &quot;文明&quot;, &quot;和谐&quot;, &quot;自由&quot;, &quot;平等&quot;, &quot;公正&quot;, &quot;法治&quot;, &quot;爱国&quot;, &quot;敬业&quot;, &quot;诚信&quot;, &quot;友善&quot;);//文字自己填写所想要的</span><br><span class="line">        var $i = $(&quot;&lt;span/&gt;&quot;).text(a[a_idx]);</span><br><span class="line">        a_idx = (a_idx + 1) % a.length;</span><br><span class="line">        var x = e.pageX,</span><br><span class="line">        y = e.pageY;</span><br><span class="line">        $i.css(&#123;</span><br><span class="line">            &quot;z-index&quot;: 5,</span><br><span class="line">            &quot;top&quot;: y - 20,</span><br><span class="line">            &quot;left&quot;: x,</span><br><span class="line">            &quot;position&quot;: &quot;absolute&quot;,</span><br><span class="line">            &quot;font-weight&quot;: &quot;bold&quot;,</span><br><span class="line">            &quot;color&quot;: &quot;#FF0000&quot;</span><br><span class="line">        &#125;);</span><br><span class="line">        $(&quot;body&quot;).append($i);</span><br><span class="line">        $i.animate(&#123;</span><br><span class="line">            &quot;top&quot;: y - 180,</span><br><span class="line">            &quot;opacity&quot;: 0</span><br><span class="line">        &#125;,</span><br><span class="line">			3000,</span><br><span class="line">			function() &#123;</span><br><span class="line">			    $i.remove();</span><br><span class="line">			&#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">    setTimeout(&apos;delay()&apos;, 2000);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">function delay() &#123;</span><br><span class="line">    $(&quot;.buryit&quot;).removeAttr(&quot;onclick&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+<p>​          然后需要在..\themes\miho\layout\layout.ejs添加语句：</p>
+<pre><code>  ` &lt;!--单击显示文字--&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/click_show_text.js&quot;&gt;&lt;/script&gt; `</code></pre><p>​        网上可以搜索自己喜欢的类型，步骤一样。</p>
+</blockquote>
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年11月11日 11:39</p>
-        <p>原始链接： <a class="post-url" href="/2019/11/11/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" title="bat批修改文件后缀名">https://qihaoqiang.github.io/2019/11/11/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</a></p>
+        <p>最后更新： 2019年11月24日 13:52</p>
+        <p>原始链接： <a class="post-url" href="/2019/11/24/%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" title="关于Hexo主题的一些踩过的坑">https://qihaoqiang.github.io/2019/11/24/%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</a></p>
         <footer>
             <a href="https://qihaoqiang.github.io">
                 <img src="/images/logo.png" alt="戚浩强">
@@ -220,7 +221,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qihaoqiang.github.io/2019/11/11/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/&title=《bat批修改文件后缀名》 — Blog-Q&pic=./images/980.jpg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qihaoqiang.github.io/2019/11/24/%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/&title=《关于Hexo主题的一些踩过的坑》 — Blog-Q&pic=https://qihaoqiang.github.ioimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -230,22 +231,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qihaoqiang.github.io/2019/11/11/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/&title=《bat批修改文件后缀名》 — Blog-Q&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qihaoqiang.github.io/2019/11/24/%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/&title=《关于Hexo主题的一些踩过的坑》 — Blog-Q&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qihaoqiang.github.io/2019/11/11/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qihaoqiang.github.io/2019/11/24/%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《bat批修改文件后缀名》 — Blog-Q&url=https://qihaoqiang.github.io/2019/11/11/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/&via=https://qihaoqiang.github.io" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《关于Hexo主题的一些踩过的坑》 — Blog-Q&url=https://qihaoqiang.github.io/2019/11/24/%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/&via=https://qihaoqiang.github.io" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qihaoqiang.github.io/2019/11/11/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qihaoqiang.github.io/2019/11/24/%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -255,7 +256,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://qihaoqiang.github.io/2019/11/11/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://qihaoqiang.github.io/2019/11/24/%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -264,17 +265,6 @@
         <ul class="article-footer-menu">
             
             
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/bat/" class="color4">bat</a>
-      
-    <a href="/tags/文件后缀名修改/" class="color3">文件后缀名修改</a>
-      
-    <a href="/tags/显示文件后缀名/" class="color3">显示文件后缀名</a>
-      
-  </li>
-
         </ul>
         
     </footer>
@@ -284,26 +274,16 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#今天先说说bat最简单的操作"><span class="post-toc-text">今天先说说bat最简单的操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#接下来就简单来说一下怎么具体操作吧"><span class="post-toc-text">接下来就简单来说一下怎么具体操作吧</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#未完待续。。。"><span class="post-toc-text">未完待续。。。</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关于Hexo主题的一些踩过的坑"><span class="post-toc-text">关于Hexo主题的一些踩过的坑</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#一、主题选择问题"><span class="post-toc-text">一、主题选择问题</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#二、绑定域名问题"><span class="post-toc-text">二、绑定域名问题</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#三、主题内容更改"><span class="post-toc-text">三、主题内容更改</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#3-1、标题，作者和文字的更换"><span class="post-toc-text">3.1、标题，作者和文字的更换</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#3-2、js特效的更换添加"><span class="post-toc-text">3.2、js特效的更换添加</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#未完待续"><span class="post-toc-text">未完待续</span></a>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2019/11/24/%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          关于Hexo主题的一些踩过的坑
-        
-      </span>
-    </a>
   
-  
-    <a href="/2019/10/25/%E5%8D%8A%E6%95%B0%E9%9B%86/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">C++半数集问题</span>
+    <a href="/2019/11/11/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">bat批修改文件后缀名</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -312,7 +292,7 @@
 
 
     
-        <div id="SOHUCS" sid="bat简单批文件操作" ></div>
+        <div id="SOHUCS" sid="关于Hexo主题的一些踩过的坑" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'true';
